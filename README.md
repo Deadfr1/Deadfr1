@@ -1,45 +1,73 @@
 # Vitaly Prochorov
 
-I build products and tools with AI — from the first idea and system design to integrations, testing, and launch.
+I design and build software products around AI, automation, and practical business needs. I usually work across the whole process: understanding the problem, shaping the product, designing how its parts should work together, integrating models and services, and bringing the result to a usable state.
 
-Most of my work is around practical applications of AI: automating repetitive tasks, connecting services, building agent-based workflows, and turning business problems into software people can actually use.
+A lot of my work is about more than adding an AI feature to an existing product. I’m interested in building complete systems: applications where data, models, agents, APIs, and user workflows work together to solve a real task.
 
-I work with AI coding tools as part of my process. I don't claim to write every line of code by hand; my part is understanding the problem, choosing the right approach, putting the pieces together, and making sure the result works.
+I use AI coding tools in development, but the important part of my work is the engineering and product side: defining the task, making architectural decisions, orchestrating the components, checking their output, and improving the system based on how it performs in practice.
 
-## What I'm working on
+## Selected projects
 
-### [XPro AI](https://xproai.ru)
-A platform for social media promotion. It brings competitor research, trend analysis, and post creation into one workflow, so businesses don't have to plan and prepare everything manually.
+### [XPro AI](https://xproai.ru) — AI platform for social media growth
 
-### СПЕЦ-КП
-A desktop application built for a customer. It reads engineering specifications from PDF files, including scanned documents, helps review the extracted items, and prepares a commercial proposal in Excel using a template.
+XPro AI brings several parts of social media marketing into one connected process. The platform is designed to help businesses and creators understand what is happening in their niche, identify relevant content opportunities, and turn those insights into posts for their social channels.
 
-The project includes PDF processing, OCR, data matching, and a review step before the final document is created. The source code and customer materials are private.
+The product combines competitor analysis, trend research, topic selection, and AI-assisted content generation. The goal is to connect research with execution: instead of planning content in isolation, users can work from competitor activity and current audience interests, then prepare content for platforms such as Instagram, Threads, Telegram, VK, and others.
 
-### Multi-agent research workflow
-A workflow for legal research and academic writing. It searches for sources, collects relevant material, and moves the work through several stages of drafting and review. A key part of this project is keeping sources traceable and avoiding made-up references.
+I’m developing the product as an integrated system rather than a standalone text generator — with an emphasis on useful analysis, a consistent brand voice, and a workflow that reduces routine work while leaving decisions and control with the user.
 
-### LLM chat and model routing
-A chat product concept that uses conversation context and selects a suitable language model depending on the request.
+### СПЕЦ-КП — document processing and commercial proposal automation
 
-### Websites and business automations
-I also build websites and smaller digital products for clients, along with automations and messaging bots. Some projects are private, so I describe them here without sharing client code or internal details.
+A desktop application developed for a customer to turn engineering specifications into structured commercial proposals.
 
-## Tools I use
+The application processes source documents in PDF format, including scanned files, extracts their contents using OCR, and helps the user review and verify the recognized data. It then works with the extracted positions and prepares a commercial proposal in Excel according to the customer's template and requirements.
 
-- **AI and models:** OpenAI, DeepSeek, OpenRouter
-- **AI development:** Codex, Cursor, OpenCode
-- **Automation and agents:** n8n, MCP, API-based integrations
+The challenge is not just reading a PDF. The solution has to deal with different document structures, recognize and organize technical positions, support human review where automatic processing may be uncertain, and transfer the approved information into a usable business document. The project brings document processing, OCR, data extraction, matching, validation, and spreadsheet generation into one desktop workflow.
+
+The source code and customer materials are private.
+
+### Multi-agent orchestrator for legal research and academic article production
+
+An orchestration system designed to support the full research and writing process for scientific legal articles, including work in the field of criminal law and procedure and requirements relevant to VAK publications.
+
+This is not a single prompt or a basic text-generation workflow. The system coordinates multiple specialized stages and agents, each responsible for a defined part of the research process. It starts with research planning and the formulation of the task, then coordinates source discovery, iterative search, source evaluation, bibliographic work, parsing, and the preparation of structured research material for subsequent writing.
+
+A central part of the architecture is source quality and traceability. The system is designed to work with relevant academic publications, legal databases, legislation, and court materials; distinguish useful sources from unsuitable ones; avoid duplicates and unsupported references; and preserve bibliographic details and page-level references where available. The writing process is grounded in the collected material rather than relying on plausible-sounding but unverifiable citations.
+
+The orchestrator also has to manage the practical complexity of multi-step research: coordinating agents, passing structured data between stages, handling search iterations and rate limits, and keeping the output consistent across the pipeline. The result is a controlled research and drafting environment, not an attempt to replace legal expertise or academic review with one AI response.
+
+### LLM chat and model orchestration
+
+A chat application concept focused on making different language models and AI capabilities available through one interface.
+
+The underlying idea is to avoid tying every request to a single model. The system can take the conversation and task into account when selecting an appropriate model or processing route. This creates room for different trade-offs between response quality, speed, cost, and the type of work being performed.
+
+The project explores the application layer around LLMs: conversation context, model access, routing logic, and the integration of multiple AI providers into a coherent user experience.
+
+### Websites, applications, and business automation
+
+Alongside larger products, I work on websites, client applications, internal tools, messaging bots, and integrations that connect existing services and business processes.
+
+These projects vary in scope — from a focused tool that removes a repetitive manual step to a more complete application with its own interface, data processing, and external integrations. I approach them by looking at the whole process first: what information comes in, what needs to happen to it, which systems are involved, and what the user should receive at the end.
+
+Some of this work is commercial or private, so I describe the engineering problems and solutions without publishing client code or confidential details.
+
+## Tools and technologies
+
+- **AI models and platforms:** OpenAI, DeepSeek, OpenRouter
+- **AI-assisted development:** Codex, Cursor, OpenCode
+- **Agents and orchestration:** n8n, MCP, multi-agent workflows, API integrations
 - **Development:** Python, JavaScript, TypeScript, React, Next.js, FastAPI
 - **Data and infrastructure:** PostgreSQL, Qdrant, Docker, Linux, VPS, REST APIs, webhooks
+- **Document processing:** PDF extraction, OCR, structured data processing, Excel generation
 
-The exact stack depends on the task. I prefer choosing tools for the problem rather than forcing every project into the same setup.
+I choose the stack based on the requirements of a project. The tools matter, but the way the components are connected and the reliability of the complete process matter more.
 
-## How I approach a project
+## How I work
 
-Usually I start with a simple question: what should become easier or work better when this is finished?
+I start by understanding the actual task and the result the product needs to deliver. Then I break the problem into components, decide how they should interact, and choose the tools and architecture that make sense for that particular case.
 
-From there I break the task into parts, work out how they should interact, build and connect the pieces, then test the result against real use cases. I pay particular attention to integrations and edge cases — that's often where a seemingly simple idea gets complicated.
+I pay close attention to the parts that are easy to overlook in a demo but important in real use: data quality, failure cases, integrations, validation, repeatability, and what happens when an automated step is unsure. I prefer a working system that can be tested and improved over a convincing prototype that only works in an ideal scenario.
 
 ## Links
 
@@ -48,4 +76,4 @@ From there I break the task into parts, work out how they should interact, build
 
 ---
 
-*Some projects are commercial or private. Where I can't share the code, I explain the problem and what the solution does instead.*
+*Some projects are commercial or private. Where the code cannot be shared, I explain the scope of the work and the problems the system is designed to solve.*
